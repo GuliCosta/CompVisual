@@ -1,0 +1,34 @@
+Gustavo Fernandes Costa RA - 10390377
+
+
+Computação gráfica:
+
+	Computação gráfica hoje em dia está presente em diversas áreas da tecnologia como por exemplo sendo hoje indispensável na maioria das ocasiões para resultar em um bom trabalho. Áreas como a medicina e construção civil que são importantíssimas para a nossa vida utilizam do CGI para melhorar e otimizar suas devidas funções. Já na área do entretenimento vemos bastante em séries, jogos e filmes que desempenham um papel fundamental na hora de assistir ou jogar o material que está sendo apresentado.
+	A computação gráfica popularmente conhecida como CGI é utilizada há anos em produções antigas de filmes como por exemplo a saga Star Wars, que é popularmente conhecida pelos efeitos visuais de seus sabres de luzes, e explosões caracteristicos que desempenham um papel fundamental na hora do espectador visualizar as lutas que estão acontecendo ali, sem a adição do CGI, apenas veríamos pessoas apontando armas ficticias e balançando bastões sem nem mesmo atingir e sem causar aquele "impacto", com isso a utilização de efeitos especiais se tornou indispensável para fazer com que quem estivesse assistindo tivesse mais imersão e se sentisse por dentro daquele universo. Outro universo que utiliza dessa tecnologia é o mundo de toy story onde brinquedos conseguem se mexer e interagem como se estivessem realmente vivos, fazendo com que crianças consigam não apenas imaginar mas ver que seus brinquedos poderiam ganhar vida trazendo assim uma felicidade para as crianças só de imaginar.
+	A computação gráfica é muito importante na vida e indispensável em algumas áreas hoje em dia, a indústria do entretenimento não seria a mesma sem a computação gráfica, filmes sem efeitos especiais em sua maioria não seriam aclamados pelos fãs pois apenas estariam assistindo pessoas "atuando" e muitas vezes sem contexto pois não conseguiriam se sentir dentro do universo daquela obra. 
+	Por esse motivo eu escolhi a área do entretenimento para descrever a importancia da computação gráfica, pois sem ela filmes, series e jogos se tornariam chatos pois não haveria como adentrar no universo daquele material.   
+
+referências: https://www.dio.me/articles/computacao-grafica-2-evolucao-e-areas-de-aplicacao
+https://maxrender.com.br/artigo/computação-gráfica:-conheça-4-das-suas-principais-aplicações
+https://www.voitto.com.br/blog/artigo/o-que-e-computacao-grafica
+
+
+Processamento de imagens:
+	
+	O processamento de imagens é utilizada hoje em dia por diversas área se tornando importantíssima para muitas pessoas, áreas como astrologia, perícia criminal e medicina onde se é necessário que as imagens geradas sejam o mais nítidas possíveis para idenficar problemas ou até mesmo descobertas que se tornariam difíceis a olho nu. Outra área muito importante que é utilizada pela maioria das pessoas em que se pode utilizar sem ter muito conhecimento é na indústria de entretenimento, ou seja o processamento de imagens passou a se tornar além de indispensável para muitas pessoas tambem muito simples e de utilização diária.
+	Na industria do entretenimento por exemplo muitas pessoas utilizam o processamento de imagens nas suas redes sociais, muitas postagens de fotos ou publicação de stories utilizam dos famosos "filtros", podendo ser utilizados para corrigir cores, aplicar efeitos "engraçados" ou até mesmo para tentar fazer com que a pessoa que está vendo a imagem "sinta a imagem", ou seja fazendo com que a imagem transmita "sentimentos", dessa forma fazendo com que o processamento de imagens fosse utilizado para transmitir uma certa mensagem, imagens mais clares transmitem um ambiente mais acolhedores e aconchegante e imagens mais escuras podem ser utilizadas para transmitir um sentimento de tensão ou preocupação, e esse "ambiente" é feito artificialmente.
+	O processamento de imagens é muito importante na maioria das áreas que necessitam utilizar de imagens para ajudar no trabalho e no cenário da industria do entretenimento pode ser utilizado para ajudar a transmitir uma mensagem para a pessoa que estiver vendo ou até mesmo para fazer com que a própria imagem consiga fazer seja criado um ambiente artificial, fazendo com que sentimentos possam ser trasmitidos.
+	Por esse motivo eu escolhi a área do entretenimento para exemplificar a importância do processamento de imagens e poder mostrar que hoje em dia está presente na vida de muitas pessoas mesmo que as vezes possa passar dispersebido.
+
+referências:https://app.uff.br/riuff/bitstream/handle/1/22773/TCC_Baggio_Luiz_de_Castro_e_Silva.pdf?sequence=1&isAllowed=y#:~:text=Atualmente%20o%20processamento%20de%20imagem,visão%20computacional%20dentre%20várias%20outras.
+https://blog.codedojo.com.br/o-que-é-processamento-de-imagens-e-algumas-aplicações-b7c71a6cfefb
+
+
+Visão Computacional:
+	A visão computacional ja existe há um tempo, porêm com o aumento e a melhoria das IAs esse processo se tornou mais rápido e menos propenso a erros, áreas como a da segurança, saúde e até mesmo agricultura utilizam essa tecnolgia, para poder automatizar e ter melhores resultados em suas operações. Outra área que começou a utilizar bastante esse sistema é a dos veículos autômatos, que trazem uma certa facilidade, conforto e segurança para as pessoas.
+	No presente momento foram vistos veículos utilizando IA para evitar acidentes, pois é posicionado cameras nos veículos que avisam  caso hajam pedestres perto do veículo, se há carros próximos para evitar batidas, freio automático para evitar com que haja colisões ao carro da frente ou de trás, correção de traãdo que detecta se o usuário está saindo da faixa sem querer, e tambem foi adicionado recursos que trazem mais conforto para o piloto, por exemplo o piloto automático que faz com que o carro possa "dirijir" sozinho, tambêm há alguns carros em que ja é possivel utilizar do estacionamento automático, que faz com que o carro através de suas cameras consiga distinguir a distancia dos veículos próximos, objetos e a calçada, e com isso a IA se ocupa de todo esse trabalho enquanto o motorista pode ficar descansando ou tendo esforço mínimo.
+	A visão computacional tornou o trabalho que as pessoas teriam muito mais simples e consequentemente menos cansativos, trazendo maior conforto e segurança para os usuários, no cenpario dos veículos autômatos tornou momentos que poderiam ser estressantes muito mais propensos a ocorrer.
+	Por esse motivo eu escolhi a área da visuão computacional que é utilizada nos veículos autômatos pois senti que era uma área que ainda pode evoluir muito e que até agora ja impressionou bastante.
+
+referências:https://aws.amazon.com/pt/what-is/computer-vision/#:~:text=As%20aplicações%20de%20visão%20computacional%20automatizam%20tarefas%20como%20monitorar%20as,estratégia%20fundamental%20da%20agricultura%20inteligente.
+https://www.engenhariahibrida.com.br/post/o-que-e-visao-computacional-10-principais-aplicacoes
