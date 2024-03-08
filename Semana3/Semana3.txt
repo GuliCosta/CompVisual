@@ -1,0 +1,11 @@
+JPEG
+
+O formato JPEG armazena palavras de valores 16-bits, eles geralmente são armazenados em blocos que são identificador com marcador.
+
+-SOI: Serve para maracar o início da imagem 
+-APP0: é o marcador de uso de aplicativo
+-Lenght: Marcador de comprimento do segmento APP0
+-Identifier: é utilizado para identificar o fluxo de código
+-version: identifica a versão através do primeiro byte, pois o primeiro byte mostra o numero da revisão principal e o segundo byte mostra o numero da revisão secundária
+-Units,Xdensity e Ydensit: Servem para identificar a resolução da imagem sendo xdensity para a resolução horizontal e Ydensit para vertical.
+-XThumbnail e YThumbnail: Servem para fornecerem as dimensões da imagem em miniatura.
