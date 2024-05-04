@@ -1,0 +1,135 @@
+Gustavo Fernandes Costa RA: 10390377
+
+1)Uma breve descrição da API gráfica que você selecionou para a pesquisa:
+-A escolha da API gráfica foi a directx, a primeira versão foi disponibilizada a partir da versão windows 95 e foi utilizada como base para gráficos tridimensionais nos consoles como xbox e DreamCast.
+
+2)Como a pipeline é documentada pelos desenvolvedores da API:
+-O pipeline do direct3D 11 é composto da seguinte maneira, os dados entram e são transformados em coordenadas de posição e outros atributos necessários para a renderização, após isso é convertido objetos geométricos básicos em polígonos mais complexos, os objetos geométricos são divididos em sessões em que há objetos definidios como menores e menos detalhados, no estágio de domínio do shaders, são processados os vértices e os mesmos são transformados no espaço do mundo, após isso é convertida os objetos geométricos mais simples em pixels, os pixels então tem seus atributos determinando a cor de cada pixel, e após isso os shaders de pixels são mesclados para criar a imagem final.
+
+3)Quais linguagens de shading (shaders) são suportadas pela API;
+-HLSL, Assembly
+
+4)Um exemplo de código que demonstra o uso da API (pode ser um "Hello, World!" gráfico – renderizar um triângulo na tela):
+-Treço de código:
+#include <windows.h>
+#include <d3d11.h>
+
+#pragma comment(lib, "d3d11.lib")
+
+LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+{
+    switch (uMsg)
+    {
+    case WM_DESTROY:
+        PostQuitMessage(0);
+        return 0;
+    default:
+        return DefWindowProc(hwnd, uMsg, wParam, lParam);
+    }
+}
+
+int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
+{
+    // Criar janela
+    WNDCLASSEX wc = { sizeof(WNDCLASSEX), CS_CLASSDC, WindowProc, 0L, 0L, GetModuleHandle(NULL), NULL, NULL, NULL, NULL, "Direct3D11HelloWorld", NULL };
+    RegisterClassEx(&wc);
+    HWND hwnd = CreateWindow(wc.lpszClassName, "Direct3D 11 Hello World", WS_OVERLAPPEDWINDOW, 100, 100, 800, 600, NULL, NULL, wc.hInstance, NULL);
+
+    // Inicializar o dispositivo Direct3D 11
+    D3D_FEATURE_LEVEL featureLevels[] = { D3D_FEATURE_LEVEL_11_0 };
+    ID3D11Device* pd3dDevice = NULL;
+    ID3D11DeviceContext* pImmediateContext = NULL;
+    if (FAILED(D3D11CreateDevice(NULL, D3D_DRIVER_TYPE_HARDWARE, NULL, 0, featureLevels, ARRAYSIZE(featureLevels),
+        D3D11_SDK_VERSION, &pd3dDevice, NULL, &pImmediateContext)))
+    {
+        return -1;
+    }
+
+    // Mostrar a janela
+    ShowWindow(hwnd, SW_SHOWDEFAULT);
+    UpdateWindow(hwnd);
+
+    // Loop principal
+    MSG msg;
+    ZeroMemory(&msg, sizeof(msg));
+    while (msg.message != WM_QUIT)
+    {
+        if (PeekMessage(&msg, NULL, 0U, 0U, PM_REMOVE))
+        {
+            TranslateMessage(&msg);
+            DispatchMessage(&msg);
+        }
+        else
+        {
+            // Renderizar aqui
+            pd3dDevice->ClearState();
+            pImmediateContext->ClearRenderTargetView(NULL, DirectX::Colors::CornflowerBlue);
+            pd3dDevice->Present(NULL, NULL, NULL, NULL);
+        }
+    }
+
+    // Limpar recursos
+    pImmediateContext->Release();
+    pd3dDevice->Release();
+    DestroyWindow(hwnd);
+    UnregisterClass(wc.lpszClassName, wc.hInstance);
+
+    return 0;
+}
+
+5)Um exemplo de código de shader suportado pela API:
+
+-// Vertex Shader
+cbuffer ConstantBuffer : register(b0)
+{
+    matrix World;
+    matrix View;
+    matrix Projection;
+};
+
+struct VertexInputType
+{
+    float3 position : POSITION;
+};
+
+struct PixelInputType
+{
+    float4 position : SV_POSITION;
+};
+
+PixelInputType main(VertexInputType input)
+{
+    PixelInputType output;
+
+    // Transformação do vértice para coordenadas do espaço de visão
+    output.position = mul(float4(input.position, 1.0f), World);
+    output.position = mul(output.position, View);
+    output.position = mul(output.position, Projection);
+
+    return output;
+}
+
+// Pixel Shader
+float4 main(PixelInputType input) : SV_TARGET
+{
+    return float4(1.0f, 0.0f, 0.0f, 1.0f); // Cor vermelha para o pixel
+}
+
+6- A descrição de um exemplo de aplicação que usa a API:
+
+-Janela de Renderização: A aplicação cria uma janela de renderização usando a API do Windows para exibir o jogo.
+Inicialização do Dispositivo Direct3D 11: Um dispositivo Direct3D 11 é inicializado para lidar com a renderização gráfica do jogo.
+Carregamento de Modelos 3D: A aplicação carrega modelos 3D para representar o jogador, os objetos do ambiente (como paredes, obstáculos, etc.) e outros elementos do jogo (como power-ups, inimigos, etc.).
+Definição de Matrizes de Transformação: São definidas matrizes de transformação para posicionar e animar os modelos 3D no ambiente de jogo. Por exemplo, uma matriz de mundo pode ser usada para mover um objeto de um lugar para outro.
+Compilação e Criação de Shaders: São compilados e criados shaders vertex e pixel para definir como os objetos serão renderizados na tela. Por exemplo, um shader pode incluir efeitos de iluminação, sombreamento, texturização, etc.
+Configuração do Pipeline de Renderização: O pipeline de renderização é configurado com os shaders compilados, os modelos 3D carregados e as matrizes de transformação definidas. Também são configurados outros elementos como a câmera (matriz de visão), a iluminação e os efeitos visuais.
+Controles de Entrada do Jogador: A aplicação implementa controles de entrada para que o jogador possa interagir com o jogo, como mover o personagem, atacar, saltar, etc. Isso envolve capturar e processar eventos do teclado, mouse ou gamepad.
+Lógica do Jogo: A aplicação inclui a lógica do jogo, como detecção de colisões entre objetos, controle de estado do jogador (vida, pontuação, etc.), IA para inimigos, efeitos sonoros, música de fundo, etc.
+Renderização da Cena do Jogo: A aplicação renderiza a cena do jogo na janela de renderização utilizando o dispositivo Direct3D 11. Isso inclui renderizar os modelos 3D dos objetos, aplicar as transformações e shaders, renderizar UI (interface do usuário), efeitos visuais, etc.
+Atualização do Jogo: O jogo é atualizado em um loop principal, onde são processados os controles de entrada, a lógica do jogo e a renderização da cena. O loop continua até que o jogo termine (o jogador perde, completa uma fase, etc.) ou o jogador decida sair do jogo.
+Finalização e Limpeza de Recursos: Ao sair do jogo, a aplicação limpa e libera os recursos utilizados, como modelos 3D, shaders, texturas, buffers, etc., e fecha a janela de renderização.
+
+
+fontes:
+https://www.linkedin.com/pulse/api-gráfica-3d-como-o-software-e-hardware-se-rafael-ribeiro-4wcke/
+http://desenvolvimentodejogos.wikidot.com/shaders
