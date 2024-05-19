@@ -1,3 +1,5 @@
+Gustavo Fernandes Costa RA:10390377
+
 -Deve primeiro ser alterado a definição dos vértices, pois no código original está sendo definido vértices referentes para um triângulo, então deve ser alterado para ser feito um cubo e suas cores.
 -Alterar os buffers para guardar os vértices do cubo e suas cores
 -Deve ser adicionado uma lógica para a rotação do cubo.
