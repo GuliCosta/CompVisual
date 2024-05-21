@@ -1,0 +1,12 @@
+Toon shading
+
+-Toon shading ou cell shading é uma técnica de renderização não fotorrealista que cria uma aparência plana em gráficos 3D. Essa técnica se baseia em quantizar os valores de iluminação para um número limitado de tons discretos, assim transformando o visual 3D em algo aparentemente plano.  
+As diferenças entre.
+
+
+Toon shading foca em criar um elemento não foto realista e utilizado para imitar o visual de desenhos animados ou quadrinhos, utilizando Cores Discretas com cores sólidas em vez de transições suaves entre luz e sombra. Já o Gouraud Shading é focado em Fotorrealismo, criando superfícies mais suaves e simulando variações contínuas de cor e intensidade de luz. Já o Phong Shading além de criar superfícies mais suaves ele busca trazer brilho para elas, sendo das três a mais custosa e demorada. De semelhança todas elas são técnicas de sombreamento usadas em gráficos em 3D, e utilizam a aplicação de iluminação em objetos em 3D.
+
+
+
+links:https://medium.com/@41928369/cel-shading-ad91936ad592
+https://vivadifferences.com/difference-between-gouraud-shading-and-phong-shading/
