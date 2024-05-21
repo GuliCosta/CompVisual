@@ -1,3 +1,5 @@
+Gustavo Fernandes Costa RA:10390377
+
 Toon shading
 
 -Toon shading ou cell shading é uma técnica de renderização não fotorrealista que cria uma aparência plana em gráficos 3D. Essa técnica se baseia em quantizar os valores de iluminação para um número limitado de tons discretos, assim transformando o visual 3D em algo aparentemente plano.  
